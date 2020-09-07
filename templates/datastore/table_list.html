@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}: {% trans 'TableList' %}{% endblock %}
+{% block content %}
+    <h1>{% trans 'Studies' %}</h1>
+    {% if not object_list %}
+    <div>
+        No studies found. Import a table to get started.
+    </div>
+    {% else %}
+        {% for table in object_list %}
+            <div class="randomizationtable">
+                <a href="{% url 'table_detail' table.pk table.slug %}">
+                    {{table.name}}
+                </a>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

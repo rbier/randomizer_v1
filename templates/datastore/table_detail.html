@@ -1,0 +1,81 @@
+{% extends 'datastore/table_base.html' %}
+{% load i18n %}
+
+{% trans 'confirmation' %}
+{% trans 'reservation' %}
+{% trans 'cancel' %}
+
+{% block title %}: {% trans 'TableDetails' %}{% endblock %}
+{% block content %}
+    <br />
+    {% if is_owner %}
+        {% if 'as_staff' in request.GET %}
+            <a href="?">View as owner</a>
+        {% else %}
+            <div>
+                <a href="?as_staff">View as staff</a>
+            </div>
+            <div class="halfwidth-table">
+                <h1>Activation Codes for {{ table.name }}</h1>
+                {{ activation_code_html_table | safe }}
+            </div>
+        {% endif %}
+    {% endif %}
+    <h1>{% trans 'RandomizationFor' %} {{table.name}}</h1>
+    {% if error %}
+        <div class="errorlist">{% trans 'ErrorInRow' %} {% trans action %}: {{ error }}</div>
+    {% endif %}
+    {% if success_message %}
+        <div class="successlist">{{ success_message }}</div>
+        {% if email_message %}
+            <div class="successlist">
+                {% trans 'Click' %}
+                <a href="mailto:?subject={% trans 'RandomizationAssignmentFor' %} {{table.name}}&body={{email_message}}">{% trans 'Here' %}</a>
+                {% trans 'GenerateEmail' %}.
+            </div>
+        {% endif %}
+    {% endif %}
+    {% if form or has_reserved_row %}
+        {% if form %}
+            <h3>{% trans 'ReserveRow' %}</h3>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <table class="halfwidth">
+                {{ form.as_table }}
+                </table>
+                <input type="submit" value="{% trans 'Reserve' %}">
+            </form>
+        {% elif has_reserved_row %}
+            {% if row_pk %}
+                <h3>{% trans 'CompleteYourRowReservation' %}</h3>
+                {{ row_table | safe }}
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="row" value="{{row_pk}}">
+                    <input type="submit" name="confirm" value="{% trans 'CompleteReservation' %}">
+                    <input type="submit" name="cancel" value="{% trans 'Cancel' %}">
+               </form>
+            {% else %}
+                <h3>{% trans 'RowAlreadyReserved' %}</h3>
+                <div>
+                    {% trans 'AnotherUserReservedRow' %}
+                </div>
+                <div>
+                    {% trans 'IfYouNeedToReserveARow' %}
+                </div>
+            {% endif %}
+        {% endif %}
+        <br />
+        <h3>{% trans 'RowsThatYouHaveAlreadyReserved' %}</h3>
+    {% endif %}
+    {% if is_owner %}
+        <form method="post">
+            <input type="hidden" name="admin" value="1">
+            {% csrf_token %}
+            {{ html_table | safe}}
+        </form>
+    {% else %}
+        {{ html_table | safe}}
+    {% endif %}
+    <br />
+{% endblock %}

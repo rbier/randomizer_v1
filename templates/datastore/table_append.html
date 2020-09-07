@@ -1,0 +1,17 @@
+{% extends 'datastore/table_base.html' %}
+{% block title %}: Add More Sites{% endblock %}
+{% block content %}
+    <h1>Add More Sites to {{object.name}}</h1>
+    <div>Please provide a csv file with a randomization table with new sites.</div>
+    <div>Clicking "append table" will append this randomization table to the existing table in the system.</div>
+    {% if error %}
+        <div class="errorlist">Error in table append: {{ error }}</div>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="halfwidth">
+        {{ form.as_table }}
+        </table>
+        <input type="submit" value="Append Table">
+    </form>
+{% endblock %}

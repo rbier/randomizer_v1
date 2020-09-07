@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}: {% trans 'RegistrationSuccessful' %}{% endblock %}
+{% block content %}
+    {% if request.user and not request.user.is_anonymous %}
+        <h1></h1>
+        <div class="errorlist">
+            {% trans 'YouAlreadyHaveAnAccount' %}.
+            {% trans 'Please' %}
+            <a href="{% url 'logout' %}">{% trans 'LogOut' %}</a>
+            {% trans 'ToCreateANewAccount' %}.
+        </div>
+    {% else %}
+        <h1>{% trans 'RegistrationSuccessful' %}</h1>
+        <div>
+            {% trans 'AccountActivationNotice' %}.
+        </div>
+        <div>
+            {% trans 'AccountActivationContact' %}.
+        </div>
+    {% endif %}
+{% endblock %}

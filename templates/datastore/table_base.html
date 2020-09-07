@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block page_options %}
+    {% if is_owner %}
+    <div class="page-options dropdown">
+        <div class="heading">Table Options</div>
+        <ul>
+            {% if table_home %}
+                <li>
+                    <a href="{{ table_home }}">Randomization</a>
+                </li>
+            {% endif %}
+            {% if table_columns %}
+                <li>
+                    <a href="{{ table_columns }}">Rename columns</a>
+                </li>
+            {% endif %}
+            {% if table_append %}
+                <li>
+                    <a href="{{ table_append }}">Add more sites</a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+    {% endif %}
+{% endblock %}

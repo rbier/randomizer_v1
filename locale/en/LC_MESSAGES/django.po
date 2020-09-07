@@ -1,0 +1,319 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-29 13:06-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\datastore\daos.py:51
+msgid "NoSiteIdError"
+msgstr "User is not associated with a site id."
+
+#: .\datastore\daos.py:83
+msgid "InvalidArmError"
+msgstr "Randomization arm values can only be 1 or 2."
+
+#: .\datastore\daos.py:241
+msgid "NoRowReservationFoundError"
+msgstr "No row reservation found."
+
+#: .\datastore\daos.py:243
+msgid "NoRowPermissionError"
+msgstr "You do not have permission for the reserved row."
+
+#: .\datastore\daos.py:252
+msgid "NoRowsAvailableError"
+msgstr "No rows available."
+
+#: .\datastore\daos.py:283
+msgid "RowReservationAlreadyExistsError"
+msgstr "Row reservation already exists."
+
+#: .\datastore\daos.py:293
+msgid "RowReservationDoesNotMatchError"
+msgstr "Row reservation does not match row requested."
+
+#: .\datastore\daos.py:320
+msgid "SiteIdPopulatedError"
+msgstr "Site id column field already populated."
+
+#: .\datastore\daos.py:322
+msgid "SiteIdInvalidError"
+msgstr "Site id invalid."
+
+#: .\datastore\daos.py:328
+msgid "SiteIdMissingError"
+msgstr "Site id column missing."
+
+#: .\datastore\daos.py:348
+msgid "NoAccessError"
+msgstr "User cannot access row without reservation or table access."
+
+#: .\datastore\model_html.py:63
+msgid "PatientId"
+msgstr "Patient Id"
+
+#: .\datastore\model_html.py:63
+msgid "RandomizationArm"
+msgstr "Randomization Arm"
+
+#: .\datastore\model_html.py:75
+msgid "NoRowsReservedYet"
+msgstr "You have not reserved any rows yet."
+
+#: .\datastore\row_transforms.py:21
+msgid "RowLengthError"
+msgstr "Row length does not match number of columns."
+
+#: .\datastore\row_transforms.py:26 .\datastore\row_transforms.py:28
+msgid "RowValueError"
+msgstr "Row value out of range."
+
+#: .\datastore\row_transforms.py:33
+msgid "RowKeysError"
+msgstr "Row keys do not match column names."
+
+#: .\datastore\views.py:28
+msgid "FormDataIncompleteError"
+msgstr "Form data incomplete."
+
+#: .\datastore\views.py:217
+msgid "CompleteReservationSuccess"
+msgstr "Row reservation successfully completed for patient {}."
+
+#: .\datastore\views.py:218
+msgid "CompleteReservationEmail"
+msgstr ""
+"This email is to confirm that patient #{} has been randomized to `{}` in the "
+"study `{}`."
+
+#: .\datastore\views.py:223 .\datastore\views.py:241
+msgid "ReservationCancel"
+msgstr "Row reservation cancelled."
+
+#: .\datastore\views.py:237
+msgid "CompleteReservationSuccessAnonymous"
+msgstr "Row reservation successfully completed."
+
+#: .\randomizer\views.py:16
+msgid "Email"
+msgstr "Email"
+
+#: .\randomizer\views.py:17
+msgid "SignupFormEmailHelpText"
+msgstr "Required. For official correspondence and user verification."
+
+#: .\randomizer\views.py:18 .\randomizer\views.py:69
+msgid "ActivationCode"
+msgstr "Activation code"
+
+#: .\randomizer\views.py:19 .\randomizer\views.py:70
+msgid "SignupFormActivationCodeHelpText"
+msgstr ""
+"Required. This eight letter code will be specific to your center and study."
+
+#: .\randomizer\views.py:33 .\randomizer\views.py:80
+msgid "ActivationCodeDoesNotExist"
+msgstr "Activation code `{}` does not exist"
+
+#: .\templates\base.html:3
+msgid "SiteTitle"
+msgstr "Randomization Management Tool"
+
+#: .\templates\base.html:17
+msgid "Home"
+msgstr "Home"
+
+#: .\templates\base.html:33 .\templates\study-access.html:4
+#: .\templates\study-access.html:6
+msgid "RequestStudyAccess"
+msgstr "Request study access"
+
+#: .\templates\base.html:41 .\templates\login.html:11
+#: .\templates\signup-thanks.html:11 .\templates\signup.html:11
+msgid "LogOut"
+msgstr "log out"
+
+#: .\templates\base.html:48 .\templates\login.html:4 .\templates\login.html:6
+#: .\templates\login.html:20
+msgid "LogIn"
+msgstr "log in"
+
+#: .\templates\datastore\table_detail.html:4
+msgid "confirmation"
+msgstr "confirmation"
+
+#: .\templates\datastore\table_detail.html:5
+msgid "reservation"
+msgstr "reservation"
+
+#: .\templates\datastore\table_detail.html:6
+msgid "cancel"
+msgstr "cancel"
+
+#: .\templates\datastore\table_detail.html:8
+msgid "TableDetails"
+msgstr "Table Details"
+
+#: .\templates\datastore\table_detail.html:24
+msgid "RandomizationFor"
+msgstr "Randomization for"
+
+#: .\templates\datastore\table_detail.html:26
+msgid "ErrorInRow"
+msgstr "Error in row"
+
+#: .\templates\datastore\table_detail.html:32 .\templates\logout.html:10
+msgid "Click"
+msgstr "Click"
+
+#: .\templates\datastore\table_detail.html:33
+msgid "RandomizationAssignmentFor"
+msgstr "Randomization assignment for"
+
+#: .\templates\datastore\table_detail.html:33 .\templates\login.html:24
+#: .\templates\logout.html:11
+msgid "Here"
+msgstr "here"
+
+#: .\templates\datastore\table_detail.html:34
+msgid "GenerateEmail"
+msgstr "to generate an email with associated information"
+
+#: .\templates\datastore\table_detail.html:40
+msgid "ReserveRow"
+msgstr "Reserve Row"
+
+#: .\templates\datastore\table_detail.html:46
+msgid "Reserve"
+msgstr "Reserve"
+
+#: .\templates\datastore\table_detail.html:50
+msgid "CompleteYourRowReservation"
+msgstr "Complete Your Row Reservation"
+
+#: .\templates\datastore\table_detail.html:55
+msgid "CompleteReservation"
+msgstr "Complete Reservation"
+
+#: .\templates\datastore\table_detail.html:56
+msgid "Cancel"
+msgstr "Cancel"
+
+#: .\templates\datastore\table_detail.html:59
+msgid "RowAlreadyReserved"
+msgstr "Row Already Reserved"
+
+#: .\templates\datastore\table_detail.html:61
+msgid "AnotherUserReservedRow"
+msgstr ""
+"Another user has reserved a row but has not processed the patient, "
+"preventing you from making a reservation."
+
+#: .\templates\datastore\table_detail.html:64
+msgid "IfYouNeedToReserveARow"
+msgstr ""
+"If you need to make a row reservation, please contact your administrator to "
+"close out the outstanding reservation."
+
+#: .\templates\datastore\table_detail.html:69
+msgid "RowsThatYouHaveAlreadyReserved"
+msgstr "Rows That You Have Already Reserved"
+
+#: .\templates\datastore\table_list.html:4
+msgid "TableList"
+msgstr "Table list"
+
+#: .\templates\datastore\table_list.html:6
+msgid "Studies"
+msgstr "Studies"
+
+#: .\templates\login.html:9
+msgid "AlreadyLoggedIn"
+msgstr "You are already logged in"
+
+#: .\templates\login.html:10 .\templates\signup-thanks.html:10
+#: .\templates\signup.html:10
+msgid "Please"
+msgstr "Please"
+
+#: .\templates\login.html:12
+msgid "AsADifferentUser"
+msgstr "if you want to log in as a different user"
+
+#: .\templates\login.html:23
+msgid "IfYouDoNotHaveAnAccount"
+msgstr "If you do not have an account, you can sign up"
+
+#: .\templates\logout.html:7
+msgid "LoggedOut"
+msgstr "You have been logged out"
+
+#: .\templates\logout.html:12
+msgid "ToLogInAgain"
+msgstr "to log in again"
+
+#: .\templates\signup-thanks.html:4 .\templates\signup-thanks.html:15
+msgid "RegistrationSuccessful"
+msgstr "Registration successful"
+
+#: .\templates\signup-thanks.html:9 .\templates\signup.html:9
+msgid "YouAlreadyHaveAnAccount"
+msgstr "You already have an account"
+
+#: .\templates\signup-thanks.html:12 .\templates\signup.html:12
+msgid "ToCreateANewAccount"
+msgstr "to create a new account"
+
+#: .\templates\signup-thanks.html:17
+msgid "AccountActivationNotice"
+msgstr "Your account has been created and will be activated shortly"
+
+#: .\templates\signup-thanks.html:20
+msgid "AccountActivationContact"
+msgstr ""
+"If you do not receive notification of account activation in a timely manner, "
+"please contact your administrator"
+
+#: .\templates\signup.html:4
+msgid "Registration"
+msgstr "Registration"
+
+#: .\templates\signup.html:6
+msgid "RegisterForAnAccount"
+msgstr "Register for an account"
+
+#: .\templates\signup.html:20
+msgid "CompleteRegistration"
+msgstr "Complete Registration"
+
+#: .\templates\study-access-thanks.html:4
+#: .\templates\study-access-thanks.html:6
+msgid "ActivationRequestPending"
+msgstr "Activation request pending"
+
+#: .\templates\study-access-thanks.html:8
+msgid "ActivationRequestSent"
+msgstr "Your study access activation request has been sent"
+
+#: .\templates\study-access-thanks.html:11
+msgid "ActivationRequestContact"
+msgstr ""
+"If you do not receive notification of study access activation in a timely "
+"manner, please contact your administrator"
+
+#: .\templates\study-access.html:12
+msgid "CompleteRequest"
+msgstr "Complete Request"

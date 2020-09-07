@@ -1,0 +1,162 @@
+body {
+    font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;
+    text-align: center;
+    background-color: #888;
+    margin: 0;
+}
+table {
+    margin: 2em auto;
+    border-collapse: collapse;
+    max-width: 46em;
+    background-color: #fff;
+}
+th {
+    vertical-align: top;
+    padding-right: 1em;
+}
+th, td {
+    border: 0.1em solid #ddd;
+    padding: 0.2em;
+    margin: 0;
+}
+h1 {
+    padding-top: 0.5em;
+}
+.account {
+    max-width: 53em;
+    padding: 0.5em;
+    background-color: #eee;
+    border-bottom-width: 0.25em;
+    border-bottom-style: double;
+    text-align: left;
+    }
+    .account a {
+        text-decoration: none;
+        color: #000;
+    }
+    .account .tablelist a {
+        padding: 0.3em;
+        border: 0.05em solid #0000;
+        }
+        .account .tablelist a:hover {
+            background-color: #fff;
+            border: 0.05em solid #bbb;
+            border-radius: 0.25em;
+            }
+    .account .dropdown {
+        position: relative;
+        white-space: nowrap;
+        cursor: default;
+        }
+        .account .dropdown ul {
+            background-color: #fff;
+            list-style-type: none;
+            position: absolute;
+            margin: 0;
+            padding: 0.3em 0;
+            margin-top: 0.3em;
+            border: 0.05em solid #bbb;
+            box-shadow: -0.05em 0.15em 0.15em rgba(0, 0, 0, 0.3);
+            }
+            .account .dropdown ul li a {
+                padding: 0.3em;
+                display: block;
+                }
+                .account .dropdown ul li a:hover {
+                    color: #fff;
+                    background-color: #888;
+                    }
+        .account .dropdown .heading {
+            position: relative;
+            margin-top: -1.2em;
+            padding: 0 0.3em;
+            border: 0.05em solid #0000;
+            border-radius: 0.25em;
+        }
+        .account .dropdown:hover .heading {
+            background-color: #fff;
+            padding: 0.3em;
+            margin-top: -1.5em;
+            border: 0.05em solid #bbb;
+            border-bottom: 0.05em solid #fff;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            z-index: 2;
+        }
+    .account .page-options {
+        float: left;
+        margin-left: 3.4em;
+    }
+    .account .user, .account .user .heading {
+        float: right;
+    }
+    .account .page-options ul {
+        left: -1000em;
+        margin-top: -0.1em;
+        }
+        .account .page-options:hover ul {
+            left: 0;
+        }
+    .account .user ul {
+        right: 1000em;
+        }
+        .account .user:hover ul {
+            right: 0;
+        }
+.body {
+    margin: 0 auto;
+    max-width: 54em;
+    min-height: 100%;
+    background-color: #ffffff;
+}
+.content {
+    padding: 0 1em;
+}
+.successlist, .errorlist {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.errorlist {
+    color: #800;
+}
+.successlist {
+    color: #080;
+}
+.helptext {
+    font-size: 0.9em;
+    }
+    .helptext ul {
+        margin: 0;
+        padding-left: 1.5em;
+    }
+.header {
+    font-size: 2em;
+    font-weight: bold;
+    max-width: 27em;
+    background-color: #ddd;
+    border-bottom-width: 0.025em;
+    border-bottom-style: solid;
+    padding: 0.5em 0 0.25em 0;
+}
+.halfwidth {
+    max-width: 25em;
+}
+.halfwidth-table table {
+    max-width: 25em;
+}
+.randomizationtable {
+    font-size: 1.5em;
+    padding: 0.5em;
+    }
+    .randomizationtable a {
+        text-decoration: none;
+        color: #000;
+        padding: 0.3em;
+        border: 0.05em solid #bbb;
+        border-radius: 0.25em;
+        display: block;
+        }
+        .randomizationtable a:hover {
+            background-color: #eee;
+        }

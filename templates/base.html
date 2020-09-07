@@ -1,0 +1,57 @@
+{% load static %}
+{% load i18n %}
+{% trans 'SiteTitle' as site_title %}
+<html>
+    <head>
+        <title>{{ site_title }}{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+        <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
+        <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}" />
+    </head>
+    <body>
+        <div class="body">
+            <div class="header">{{ site_title }}</div>
+            {% if request.user and not request.user.is_anonymous %}
+                <div class="account">
+                    <div class="tablelist">
+                        <a href="{% url 'table_list' %}">{% trans 'Home' %}</a>
+                    </div>
+                    {% block page_options %}
+                    {% endblock %}
+                    <div class="user dropdown">
+                        <div class="heading">{{request.user}}</div>
+                        <ul>
+                            {% if request.user.is_staff %}
+                            <li>
+                                <a href="{% url 'admin:index' %}">Admin panel</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'access_approval' %}">Study access approval</a>
+                            </li>
+                            {% endif %}
+                            <li>
+                                <a href="{% url 'study_access' %}">{% trans 'RequestStudyAccess' %}</a>
+                            </li>
+                            {% if user_can_create_tables %}
+                                <li>
+                                    <a href="{% url 'table_import' %}">Import table</a>
+                                </li>
+                            {% endif %}
+                            <li>
+                                <a href="{% url 'logout' %}">{% trans 'LogOut'|capfirst %}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            {% else %}
+                <div class="account">
+                    <a href="{% url 'login' %}">{% trans 'LogIn'|capfirst %}</a>
+                </div>
+            {% endif %}
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,6 @@
+.coverage
+.idea
+db.sqlite3
+dev_manage.py
+randomizer/dev_settings.py
+staticfiles

@@ -1,0 +1,16 @@
+{% extends 'datastore/table_base.html' %}
+{% block title %}: Table Column Details{% endblock %}
+{% block content %}
+    <h1>Columns for {{table.name}}</h1>
+    {% if error %}
+        <div class="errorlist">Error in column update: {{ error }}</div>
+    {% endif %}
+    {% if success_message %}
+        <div class="successlist">{{ success_message }}</div>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        {{ column_html_table | safe }}
+        <input type="submit" value="Update columns">
+    </form>
+{% endblock %}

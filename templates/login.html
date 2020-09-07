@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}: {% trans 'LogIn'|capfirst %}{% endblock %}
+{% block content %}
+    <h1>{% trans 'LogIn'|capfirst %}</h1>
+    {% if not request.user and not request.user.is_anonymous %}
+        <div class="errorlist">
+            {% trans 'AlreadyLoggedIn' %}.
+            {% trans 'Please' %}
+            <a href="{% url 'logout' %}">{% trans 'LogOut' %}</a>
+            {% trans 'AsADifferentUser' %}.
+        </div>
+    {% else %}
+        <form method="post">
+            {% csrf_token %}
+            <table class="halfwidth">
+                {{ form.as_table }}
+            </table>
+            <input type="submit" value="{% trans 'LogIn'|title %}">
+        </form>
+        <div>
+            {% trans 'IfYouDoNotHaveAnAccount' %}
+            <a href="{% url 'signup' %}">{% trans 'Here' %}</a>.
+        </div>
+    {% endif %}
+{% endblock %}

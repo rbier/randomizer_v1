@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}: Import CSV{% endblock %}
+{% block content %}
+    <h1>Import CSV</h1>
+    <div>Please provide a csv file with a randomization table, and a name for this table.</div>
+    <div>Clicking "create table" will import this randomization table into the system.</div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="halfwidth">
+        {{ form.as_table }}
+        </table>
+        <input type="submit" value="Create Table">
+    </form>
+{% endblock %}

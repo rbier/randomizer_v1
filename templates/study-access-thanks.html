@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}: {% trans 'ActivationRequestPending' %}{% endblock %}
+{% block content %}
+    <h1>{% trans 'ActivationRequestPending' %}</h1>
+    <div>
+        {% trans 'ActivationRequestSent' %}.
+    </div>
+    <div>
+        {% trans 'ActivationRequestContact' %}.
+    </div>
+{% endblock %}

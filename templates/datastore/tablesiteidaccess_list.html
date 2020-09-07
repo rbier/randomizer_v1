@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}: Study Access Approval{% endblock %}
+{% block content %}
+    <h1>Study Access Requests</h1>
+    {% if error %}
+        <div class="errorlist">{{ error }}</div>
+    {% endif %}
+    {% if success_message %}
+        <div class="successlist">{{ success_message }}</div>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        {{ html_table | safe }}
+    </form>
+{% endblock %}

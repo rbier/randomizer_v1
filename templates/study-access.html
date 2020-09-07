@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block title %}: {% trans 'RequestStudyAccess' %}{% endblock %}
+{% block content %}
+    <h1>{% trans 'RequestStudyAccess' %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table class="halfwidth">
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="{% trans 'CompleteRequest' %}">
+    </form>
+{% endblock %}

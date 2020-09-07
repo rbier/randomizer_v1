@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+    <h1></h1>
+    <div>
+        {% trans 'LoggedOut' %}.
+    </div>
+    <div>
+        {% trans 'Click' %}
+        <a href="{% url 'login' %}">{% trans 'Here' %}</a>
+        {% trans 'ToLogInAgain' %}.
+    </div>
+{% endblock %}
