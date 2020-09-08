@@ -68,7 +68,7 @@ Once the above settings are configured, deploy using your local git checkout of 
 
 ## Creating a unique secret key
 
-Every Django project needs a (SECRET_KEY)[https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-SECRET_KEY] for cryptographic signing. You can set this in your environment via the `secret_key` environment variable. It is also possible to hard code this in your `randomizer/settings.py`; this is not recommended if you plan on sharing your code, as any person with access to this variable can work around many of Django’s security protections.
+Every Django project needs a [SECRET_KEY](https://docs.djangoproject.com/en/2.2/ref/settings/#std:setting-SECRET_KEY) for cryptographic signing. You can set this in your environment via the `secret_key` environment variable. It is also possible to hard code this in your `randomizer/settings.py`; this is not recommended if you plan on sharing your code, as any person with access to this variable can work around many of Django’s security protections.
 
 To generate a secret_key, run the following script:
 
